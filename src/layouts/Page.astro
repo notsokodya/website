@@ -1,0 +1,51 @@
+---
+interface Props {
+    title?: string;
+    description?: string;    
+}
+
+const {title, description} = Astro.props;
+
+const metaTitle = `${title ? title + " // " : ""}notso[kodya]`;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+        <link rel="manifest" href="manifest.json" />
+        <link rel="stylesheet" href="/styles/global.css" />
+        
+		<title>{metaTitle}</title>
+        <meta name="title" content={metaTitle} />
+        <meta name="description" content={description} />
+        <meta name="theme-color" content="#8067eb" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://notsokodya.ru" />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={description} />
+	</head>
+	<body>
+        <main>
+            <slot />
+        </main>
+	</body>
+</html>
+
+<style>
+    main {
+        min-height: calc(100vh - 8rem);
+        max-width: 1000px;
+        width: 100%;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-left: .5rem;
+        padding-right: .5rem;
+        padding-bottom: 1rem;
+    }
+</style>
