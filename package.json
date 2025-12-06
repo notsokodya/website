@@ -5,10 +5,12 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "start": "node ./dist/server/entry.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/node": "^9.5.1",
     "@astrojs/react": "^4.4.2",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
