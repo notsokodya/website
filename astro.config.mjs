@@ -5,13 +5,13 @@ import react from '@astrojs/react';
 import node from '@astrojs/node';
 
 export default defineConfig({
-  devToolbar: {
-      enabled: false
-  },
+    devToolbar: {
+        enabled: false
+    },
 
-  integrations: [react()],
+    integrations: [react()],
 
-  adapter: node({
-    mode: 'standalone'
-  })
+    adapter: node({
+        mode: 'standalone'
+    })
 });
