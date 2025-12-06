@@ -1,0 +1,249 @@
+/*------------------- Fonts -------------------*/
+
+@font-face {
+    font-family: "Iosevka";
+    font-display: swap;
+    font-weight: 400;
+    font-stretch: expanded;
+    font-style: normal;
+    src: url("/fonts/iosevka-extended.woff2") format("woff2");
+    ascent-override: 100%;
+}
+@font-face {
+    font-family: "Iosevka";
+    font-display: swap;
+    font-weight: 400;
+    font-stretch: expanded;
+    font-style: italic;
+    src: url("/fonts/iosevka-extendeditalic.woff2") format("woff2");
+    ascent-override: 100%;
+}
+@font-face {
+    font-family: "Iosevka";
+    font-display: swap;
+    font-weight: 500;
+    font-stretch: expanded;
+    font-style: normal;
+    src: url("/fonts/iosevka-extendedmedium.woff2") format("woff2");
+    ascent-override: 100%;
+}
+@font-face {
+    font-family: "Iosevka";
+    font-display: swap;
+    font-weight: 500;
+    font-stretch: expanded;
+    font-style: italic;
+    src: url("/fonts/iosevka-extendedmediumitalic.woff2") format("woff2");
+    ascent-override: 100%;
+}
+@font-face {
+    font-family: "Iosevka";
+    font-display: swap;
+    font-weight: 600;
+    font-stretch: expanded;
+    font-style: normal;
+    src: url("/fonts/iosevka-extendedsemibold.woff2") format("woff2");
+    ascent-override: 100%;
+}
+@font-face {
+    font-family: "Iosevka";
+    font-display: swap;
+    font-weight: 600;
+    font-stretch: expanded;
+    font-style: italic;
+    src: url("/fonts/iosevka-extendedsemibolditalic.woff2") format("woff2");
+    ascent-override: 100%;
+}
+@font-face {
+    font-family: "Iosevka";
+    font-display: swap;
+    font-weight: 700;
+    font-stretch: expanded;
+    font-style: normal;
+    src: url("/fonts/iosevka-extendedbold.woff2") format("woff2");
+    ascent-override: 100%;
+}
+@font-face {
+    font-family: "Iosevka";
+    font-display: swap;
+    font-weight: 700;
+    font-stretch: expanded;
+    font-style: italic;
+    src: url("/fonts/iosevka-extendedbolditalic.woff2") format("woff2");
+    ascent-override: 100%;
+}
+
+/*------------------- Main -------------------*/
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.5rem;
+    text-align: left;
+}
+
+html {
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    font-family: var(--font-one);
+    font-weight: 500;
+    font-size: 1em;
+
+    tab-size: 4;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    scrollbar-color: var(--primary-color) var(--background-color) !important;
+    scrollbar-width: thin !important;
+}
+
+::selection {
+    background: var(--primary-color) !important;
+    color: var(--background-color) !important;
+}
+
+/*------------------- Variables -------------------*/
+
+:root {
+    /*------- Theme Variables -------*/
+
+    --primary-color-hsl:    var(--fuchsia-blue-500-hsl);
+    --primary-color:        var(--fuchsia-blue-500);
+    --primary-shade-color:  var(--fuchsia-blue-700);
+    --primary-tint-color:   var(--fuchsia-blue-400);
+
+    --text-color:           var(--cinder-300);
+    --text-shade-color:    var(--cinder-400);
+    --text-tint-color:   var(--cinder-200);
+    --text-hover-color:     var(--text-tint-color);
+    --text-disabled-color:  var(--text-shade-color);
+
+    --background-color:     var(--cinder-900);
+    --background-color-hsl: var(--cinder-900-hsl);
+    --background-transparent-color: hsla(var(--background-color-hsl), 0.75);
+
+    --border-width:         2px;
+    --border-color:         hsla(var(--cinder-800-hsl), 0.5);
+    --border-shade-color:   hsla(var(--cinder-900-hsl), 0.3);
+    --border-tint-color:    hsla(var(--cinder-700-hsl), 0.5);
+    --border-radius:        8px;
+
+    /*------- Font Variables -------*/
+
+    --font-one: "Iosevka", "Courier New", monospace;
+
+    /*----- Colors Palette Variables -----*/
+
+    --cinder-50:  #f5faff;
+    --cinder-100: #d7dcfa;
+    --cinder-200: #cdd6f4;
+    --cinder-300: #c3c8e1;
+    --cinder-400: #a5afbd;
+    --cinder-500: #6e737d;
+    --cinder-600: #4e525f;
+    --cinder-700: #3b404c;
+    --cinder-800: #23262f;
+    --cinder-900: #11111b;
+    --cinder-950: #0a0a10;
+
+    --cinder-50-hsl:  210, 100%, 98%;
+    --cinder-100-hsl: 231, 78%, 91%;
+    --cinder-200-hsl: 226, 64%, 88%;
+    --cinder-300-hsl: 230, 33%, 82%;
+    --cinder-400-hsl: 215, 15%, 69%;
+    --cinder-500-hsl: 220, 6%, 46%;
+    --cinder-600-hsl: 226, 10%, 34%;
+    --cinder-700-hsl: 222, 13%, 26%;
+    --cinder-800-hsl: 225, 15%, 16%;
+    --cinder-900-hsl: 240, 23%, 9%;
+    --cinder-950-hsl: 240, 23%, 5%;
+
+    --fuchsia-blue-50:  #f5f4fe;
+    --fuchsia-blue-100: #ecebfc;
+    --fuchsia-blue-200: #dbd9fb;
+    --fuchsia-blue-300: #c0baf8;
+    --fuchsia-blue-400: #a093f2;
+    --fuchsia-blue-500: #8067eb;
+    --fuchsia-blue-600: #7854e2;
+    --fuchsia-blue-700: #5f35cc;
+    --fuchsia-blue-800: #4e2cab;
+    --fuchsia-blue-900: #42268c;
+    --fuchsia-blue-950: #28165f;
+
+    --fuchsia-blue-50-hsl:  246, 83%, 98%;
+    --fuchsia-blue-100-hsl: 244, 74%, 95%;
+    --fuchsia-blue-200-hsl: 244, 81%, 92%;
+    --fuchsia-blue-300-hsl: 246, 82%, 85%;
+    --fuchsia-blue-400-hsl: 248, 79%, 76%;
+    --fuchsia-blue-500-hsl: 251, 77%, 66%;
+    --fuchsia-blue-600-hsl: 255, 71%, 61%;
+    --fuchsia-blue-700-hsl: 257, 60%, 50%;
+    --fuchsia-blue-800-hsl: 256, 59%, 42%;
+    --fuchsia-blue-900-hsl: 256, 57%, 35%;
+    --fuchsia-blue-950-hsl: 255, 62%, 23%;
+}
+
+/*------------------- Components styling -------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    width: fit-content;
+    padding: .2rem .4rem;
+
+    font-family: var(--font-two);
+    font-weight: 600;
+
+    color: var(--background-color);
+    background-color: var(--primary-color);
+}
+
+a {
+    color: var(--primary-color);
+    font-weight: 800;
+    text-decoration: none;
+    transition: .125s;
+}
+a:hover {
+    color: var(--primary-tint-color);
+}
+
+p {
+    margin-block-start: 0.75em;
+    margin-block-end: 0.75em;
+}
+
+strong {
+    padding: .1rem .2rem;
+    font-weight: 700;
+    background-color: hsla(var(--primary-color-hsl), 0.3);
+    color: var(--primary-color);
+}
+
+small {
+    color: var(--text-shade-color);
+    font-size: .75rem;
+    font-weight: 900;
+    line-height: 1rem;
+}
+
+hr {
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: .15rem;
+    margin-bottom: 2rem;
+
+    border-left: 0;
+    border-right: 0;
+    border-top: dotted 3px var(--primary-color);
+    border-bottom: dotted 3px var(--primary-color);
+}
