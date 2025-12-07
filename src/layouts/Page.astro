@@ -1,4 +1,5 @@
 ---
+import NavBar from "@/components/NavBar.astro";
 import { ClientRouter } from "astro:transitions";
 
 interface Props {
@@ -33,6 +34,7 @@ const metaTitle = `${title ? title + " // " : ""}notso[kodya]`;
         <ClientRouter />
 	</head>
 	<body>
+        <NavBar />
         <main>
             <slot />
         </main>

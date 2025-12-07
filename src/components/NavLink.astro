@@ -1,0 +1,8 @@
+---
+const {href, class: className, ...props} = Astro.props;
+const isActive = !href ? false : href !== "/" ? Astro.url.pathname.startsWith(href) : Astro.url.pathname == href
+---
+
+<a class:list={[className, {"active": isActive}]} href={href} {...props}>
+    <slot />
+</a>
