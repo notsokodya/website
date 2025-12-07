@@ -1,7 +1,9 @@
 ---
+import { ClientRouter } from "astro:transitions";
+
 interface Props {
     title?: string;
-    description?: string;    
+    description?: string;
 }
 
 const {title, description} = Astro.props;
@@ -17,7 +19,7 @@ const metaTitle = `${title ? title + " // " : ""}notso[kodya]`;
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
         <link rel="manifest" href="manifest.json" />
         <link rel="stylesheet" href="/styles/global.css" />
-        
+
 		<title>{metaTitle}</title>
         <meta name="title" content={metaTitle} />
         <meta name="description" content={description} />
@@ -27,6 +29,8 @@ const metaTitle = `${title ? title + " // " : ""}notso[kodya]`;
         <meta property="og:url" content="https://notsokodya.ru" />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={description} />
+
+        <ClientRouter />
 	</head>
 	<body>
         <main>
