@@ -10,4 +10,4 @@ The website for myself :3
 
 # License
 
-The source code for this website is licensed under the [zlib][https://github.com/notsokodya/website/blob/master/LICENSE] license.
+The source code for this website is licensed under the [zlib](LICENSE) license.
