@@ -1,7 +1,7 @@
 ---
 import NavBar from "@/components/NavBar.astro";
 import Footer from "@/components/Footer.astro";
-import { ClientRouter } from "astro:transitions";
+import { ClientRouter, fade } from "astro:transitions";
 
 interface Props {
     title?: string;
@@ -36,7 +36,7 @@ const metaTitle = `${title ? title + " // " : ""}notso[kodya]`;
 	</head>
 	<body>
         <NavBar />
-        <main>
+        <main transition:animate={fade({duration: "0.25s"})}>
             <slot />
         </main>
         <Footer />
