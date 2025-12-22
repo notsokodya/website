@@ -1,0 +1,51 @@
+---
+import { getWebsiteVersion } from "@/utils/helpers"
+
+const {hash, date} = await getWebsiteVersion();
+---
+
+<footer>
+    <div class="container">
+        <div>
+            Made with <mark>❤</mark><br/>
+            © 2025-{(new Date()).getFullYear()} <mark>notsokodya</mark>
+        </div>
+        <div>
+            Last updated on <mark>{date}</mark><br/>
+            <a href="https://github.com/notsokodya/website">Source code</a> ({hash})
+        </div>
+    </div>
+</footer>
+
+<style>
+    footer {
+        font-weight: 600;
+        font-size: .9rem;
+
+        width: 100%;
+        padding: 0;
+
+        display: flex;
+
+        border-top: solid var(--border-width) var(--border-color);
+        background-color: var(--background-color);
+        color: var(--text-shade-color);
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+
+        display: flex;
+        justify-content: space-between;
+
+        padding: 1rem 2rem;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container div:last-child {
+        text-align: right;
+    }
+</style>
