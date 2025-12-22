@@ -1,3 +1,5 @@
+export const isProduction = import.meta.env.MODE == "production";
+
 let GIT_HASH
 let GIT_DATE
 export async function getWebsiteVersion() {
