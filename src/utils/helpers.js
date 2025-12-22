@@ -3,7 +3,7 @@ export const isProduction = import.meta.env.MODE == "production";
 let GIT_HASH
 let GIT_DATE
 export async function getWebsiteVersion() {
-    if (GIT_HASH !== undefined & GIT_DATE !== undefined) {
+    if (GIT_HASH !== undefined & GIT_DATE !== undefined & isProduction) {
         return {hash: GIT_HASH, date: GIT_DATE}
     } else {
         const childProcess = await import("node:child_process");
