@@ -124,7 +124,7 @@ html {
     --primary-tint-color:   var(--mauve-200);
 
     --text-color:           var(--cinder-200);
-    --text-shade-color:     var(--cinder-300);
+    --text-shade-color:     var(--cinder-400);
     --text-tint-color:      var(--cinder-100);
     --text-hover-color:     var(--text-tint-color);
     --text-disabled-color:  var(--text-shade-color);
@@ -144,7 +144,7 @@ html {
     --font-one: "Iosevka", "Courier New", monospace;
 
     /*----- Colors Palette Variables -----*/
-    
+
 
     --cinder-50:  #f9fafb;
     --cinder-100: #f4f4f7;
