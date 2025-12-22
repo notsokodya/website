@@ -248,3 +248,8 @@ hr {
     border-top: dotted 3px var(--primary-color);
     border-bottom: dotted 3px var(--primary-color);
 }
+
+mark {
+    color: var(--primary-color);
+    background-color: inherit;
+}
