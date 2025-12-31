@@ -28,7 +28,7 @@ const randomDescriptions = [
     "huh",
     "\"bottom text\"",
     "industrial revolution",
-    "haha closed source",
+    "haha open source",
     "real furry(frfr)",
     "table.shuffle(_G)",
     "tf2 gamer",
