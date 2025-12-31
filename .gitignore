@@ -23,3 +23,6 @@ pnpm-debug.log*
 # IDE setting folder
 .idea/
 .vscode/
+
+# PFP, becasue i don't want to be killed by artists
+public/assets/pfp.png
