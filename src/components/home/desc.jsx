@@ -5,24 +5,20 @@ const randomDescriptions = [
     "the silly goober",
     "sharrkss are cuuuteeee",
     "engineer gaming",
-    "it works on magik",
     "5g horse",
     "mrow :3",
-    "lives in the [void]",
+    "lives in [the void]",
     "self-taught programmer",
     "stay hydrated",
     "sewerslvt fan",
-    "THE EYES, SO MANY EYES",
     "pray the machine",
     "local toaster",
-    "purple 💜",
     "shark protogen thing",
     "demoncore production",
     "sleep deprived",
     "haiiii",
     "internet creatura",
     "fish fish shark",
-    "not a dolphin >:[",
     "evil shark co.",
     "netwowk swipth",
     "huh",
@@ -36,8 +32,7 @@ const randomDescriptions = [
     "segmentation fault",
     "██████████████████",
     "j",
-    "fun fact: 🦈",
-    "social anxiety :D"
+    "social anxiety ;w;"
 ];
 
 export default function Desc({className, ...props}) {
