@@ -23,6 +23,25 @@ import Desc from "@/components/home/desc";
             class="pfp"
         />
     </div>
+
+    <section>
+        <h2 class="title">introduction</h2>
+        <div class="strip"/>
+
+        <p>
+            haiii, i&apos;m <strong>Kodya</strong>, jack of all trades, master of none. student, self-taught programmer, artist and owner of other various skills.
+        </p>
+
+        <p>
+            usually i play games, write code and do random stuff on the internet<br/>
+            also sometimes i go outside (touching grass)
+        </p>
+    </section>
+
+    <section>
+        <h2 class="title">88x31 buttons</h2>
+        <p>friends :3</p>
+    </section>
 </Layout>
 
 <style>
@@ -64,4 +83,42 @@ import Desc from "@/components/home/desc";
         outline: solid var(--border-width) var(--primary-color);
         outline-offset: .5rem;
     }
+
+
+    section {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    section > .title {
+        width: fit-content;
+        padding: .1rem .5rem;
+        margin-bottom: .5rem;
+        margin-top: .15rem;
+
+        font-size: 1.2rem;
+        color: var(--primary-color);
+        background-color: transparent;
+        border-left: solid .3rem var(--primary-color);
+    }
+
+    section > .strip {
+        padding: 1rem;
+        margin: 1rem 0;
+
+        border: solid .3rem var(--primary-color);
+        background-image: repeating-linear-gradient(45deg, transparent, transparent 1rem, var(--primary-color) 1rem, var(--primary-color) 1.4rem);
+        background-size: 2rem 2rem;
+        animation: background-move 4s linear infinite;
+    }
+
+    @keyframes background-move {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 8rem 0;
+    }
+}
 </style>
