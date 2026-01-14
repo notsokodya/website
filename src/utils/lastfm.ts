@@ -26,7 +26,7 @@ interface dataTrack {
 export let tracks: (() => Track[]) | undefined;
 
 if (API_KEY && USERNAME) {
-    setInterval(async () => {
+    const fetchFM = async () => {
         const resp = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${USERNAME}&limit=4&extended=1&format=json&api_key=${API_KEY}`, {
             headers: {
                 "User-Agent": "notsokodya.ru Last.fm API (Astro)"
@@ -46,5 +46,8 @@ if (API_KEY && USERNAME) {
         });
 
         console.log("!")
-    }, 60000);
+    }
+    setInterval(fetchFM, 60000);
+
+    fetchFM();
 }
