@@ -44,8 +44,6 @@ if (API_KEY && USERNAME) {
                 isPlaying: track["@attr"]?.nowplaying === "true"
             }
         });
-
-        console.log("!")
     }
     setInterval(fetchFM, 60000);
 
