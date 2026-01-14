@@ -41,7 +41,7 @@ if (API_KEY && USERNAME) {
                 url: track.url,
                 cover: track.image.find((cover: any) => cover.size === "extralarge")?.["#text"],
                 loved: track.loved == 1,
-                isPlaying: track["@attr"]?.nowplaying === "false"
+                isPlaying: track["@attr"]?.nowplaying === "true"
             }
         });
 
