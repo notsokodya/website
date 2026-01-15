@@ -1,0 +1,33 @@
+---
+import Layout from "@/layouts/Page.astro";
+---
+
+<Layout title="404 NOT FOUND" description="whuh, where did page go ??? ;w;">
+    <div class="head">
+        <img
+            src="/assets/404_tree.gif"
+            width="256px"
+            height="256px"
+        />
+
+        <div class="container">
+            <h1>404</h1>
+            <p>Looks like a page you were looking for was lost in space and time...</p>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+</style>
