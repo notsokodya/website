@@ -38,7 +38,7 @@ if (API_KEY && USERNAME) {
         });
         const raw  = await resp.json();
 
-        tracks = raw.recenttracks.track.slice(0, 4).map((track: dataTrack) => {
+        tracks = raw?.recenttracks?.track?.slice(0, 4).map((track: dataTrack) => {
             return {
                 name: track.name,
                 artist: track.artist.name,
