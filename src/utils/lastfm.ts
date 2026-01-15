@@ -43,7 +43,7 @@ if (API_KEY && USERNAME) {
                 name: track.name,
                 artist: track.artist.name,
                 url: track.url,
-                cover: track.image.find((cover: any) => cover.size === "extralarge")?.["#text"],
+                cover: track.image.find((cover: any) => cover.size === "large")?.["#text"],
                 loved: track.loved == 1,
                 isPlaying: track["@attr"]?.nowplaying === "true",
                 date: track.date ? track.date.uts : "nowplaying"
