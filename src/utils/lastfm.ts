@@ -7,7 +7,8 @@ interface Track {
     url: string,
     cover: string,
     loved: boolean,
-    isPlaying: boolean
+    isPlaying: boolean,
+    date: string
 }
 
 interface dataTrack {
@@ -20,6 +21,9 @@ interface dataTrack {
     image: [],
     "@attr": {
         nowplaying: string
+    },
+    date: {
+        uts: string
     }
 }
 
@@ -41,7 +45,8 @@ if (API_KEY && USERNAME) {
                 url: track.url,
                 cover: track.image.find((cover: any) => cover.size === "extralarge")?.["#text"],
                 loved: track.loved == 1,
-                isPlaying: track["@attr"]?.nowplaying === "true"
+                isPlaying: track["@attr"]?.nowplaying === "true",
+                date: track.date.uts
             }
         });
     }
