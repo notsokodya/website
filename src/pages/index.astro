@@ -122,8 +122,10 @@ import Desc from "@/components/home/desc";
         }
     }
 
-    to {
-        background-position: 8rem 0;
+    @media screen and (width <= 700px) {
+        .hero {
+            flex-direction: column-reverse;
+        }
     }
 }
 </style>
