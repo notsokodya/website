@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Page.astro";
 import Desc from "@/components/home/desc";
+import LastFM from "@/components/home/lastfm";
 ---
 
 <Layout description="meow meow mrow :3">
@@ -36,6 +37,12 @@ import Desc from "@/components/home/desc";
             usually i play games, write code and do random stuff on the internet<br/>
             also sometimes i go outside (to touch grass)
         </p>
+    </section>
+
+    <section>
+        <h2 class="title">recently listened</h2>
+        <p>my horrible music taste :3</p>
+        <LastFM className="tracks" client:idle/>
     </section>
 
     <section>
@@ -112,6 +119,56 @@ import Desc from "@/components/home/desc";
         animation: background-move 4s linear infinite;
     }
 
+    .tracks {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .75rem;
+
+        padding: 0;
+        margin: 0;
+
+        list-style: none;
+    }
+
+    .tracks .track {
+        width: 160px;
+
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+        align-items: center;
+
+        color: var(--text-shade-color);
+        background-color: var(--background-shade-color);
+
+        transition: .125s;
+    }
+    .tracks img {
+        outline: solid 1px var(--border-color);
+    }
+    .tracks .title {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        word-wrap: anywhere;
+
+        color: var(--text-color);
+        background-color: transparent;
+    }
+    .tracks .artist {
+        font-size: 0.9rem;
+    }
+    .tracks .loved {
+        color: var(--primary-color);
+    }
+    .tracks .playing {
+        color: var(--text-color);
+    }
+
+    .tracks .track:hover img {
+        outline-color: var(--border-tint-color);
+    }
+
     @keyframes background-move {
         from {
             background-position: 0 0;
@@ -127,5 +184,4 @@ import Desc from "@/components/home/desc";
             flex-direction: column-reverse;
         }
     }
-}
 </style>
