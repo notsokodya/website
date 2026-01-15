@@ -146,6 +146,7 @@ import LastFM from "@/components/home/lastfm";
     }
     .tracks img {
         outline: solid 1px var(--border-color);
+        transition: .2s ease-out;
     }
     .tracks .title {
         text-overflow: ellipsis;
@@ -166,7 +167,8 @@ import LastFM from "@/components/home/lastfm";
     }
 
     .tracks .track:hover img {
-        outline-color: var(--border-tint-color);
+        transform: perspective(160px) translateY(-4px) rotateX(5deg);
+        outline-color: var(--primary-color);
     }
 
     @keyframes background-move {
