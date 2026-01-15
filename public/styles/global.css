@@ -1,75 +1,75 @@
 /*------------------- Fonts -------------------*/
 
 @font-face {
-    font-family: "Iosevka";
+    font-family: "Iosevka Fixed";
     font-display: swap;
     font-weight: 400;
     font-stretch: expanded;
     font-style: normal;
-    src: url("/fonts/iosevka-extended.woff2") format("woff2");
+    src: url("/fonts/iosevkafixed-extended.woff2") format("woff2");
     ascent-override: 100%;
 }
 @font-face {
-    font-family: "Iosevka";
+    font-family: "Iosevka Fixed";
     font-display: swap;
     font-weight: 400;
     font-stretch: expanded;
     font-style: italic;
-    src: url("/fonts/iosevka-extendeditalic.woff2") format("woff2");
+    src: url("/fonts/iosevkafixed-extendeditalic.woff2") format("woff2");
     ascent-override: 100%;
 }
 @font-face {
-    font-family: "Iosevka";
+    font-family: "Iosevka Fixed";
     font-display: swap;
     font-weight: 500;
     font-stretch: expanded;
     font-style: normal;
-    src: url("/fonts/iosevka-extendedmedium.woff2") format("woff2");
+    src: url("/fonts/iosevkafixed-extendedmedium.woff2") format("woff2");
     ascent-override: 100%;
 }
 @font-face {
-    font-family: "Iosevka";
+    font-family: "Iosevka Fixed";
     font-display: swap;
     font-weight: 500;
     font-stretch: expanded;
     font-style: italic;
-    src: url("/fonts/iosevka-extendedmediumitalic.woff2") format("woff2");
+    src: url("/fonts/iosevkafixed-extendedmediumitalic.woff2") format("woff2");
     ascent-override: 100%;
 }
 @font-face {
-    font-family: "Iosevka";
+    font-family: "Iosevka Fixed";
     font-display: swap;
     font-weight: 600;
     font-stretch: expanded;
     font-style: normal;
-    src: url("/fonts/iosevka-extendedsemibold.woff2") format("woff2");
+    src: url("/fonts/iosevkafixed-extendedsemibold.woff2") format("woff2");
     ascent-override: 100%;
 }
 @font-face {
-    font-family: "Iosevka";
+    font-family: "Iosevka Fixed";
     font-display: swap;
     font-weight: 600;
     font-stretch: expanded;
     font-style: italic;
-    src: url("/fonts/iosevka-extendedsemibolditalic.woff2") format("woff2");
+    src: url("/fonts/iosevkafixed-extendedsemibolditalic.woff2") format("woff2");
     ascent-override: 100%;
 }
 @font-face {
-    font-family: "Iosevka";
+    font-family: "Iosevka Fixed";
     font-display: swap;
     font-weight: 700;
     font-stretch: expanded;
     font-style: normal;
-    src: url("/fonts/iosevka-extendedbold.woff2") format("woff2");
+    src: url("/fonts/iosevkafixed-extendedbold.woff2") format("woff2");
     ascent-override: 100%;
 }
 @font-face {
-    font-family: "Iosevka";
+    font-family: "Iosevka Fixed";
     font-display: swap;
     font-weight: 700;
     font-stretch: expanded;
     font-style: italic;
-    src: url("/fonts/iosevka-extendedbolditalic.woff2") format("woff2");
+    src: url("/fonts/iosevkafixed-extendedbolditalic.woff2") format("woff2");
     ascent-override: 100%;
 }
 
@@ -141,7 +141,7 @@ html {
 
     /*------- Font Variables -------*/
 
-    --font-one: "Iosevka", "Courier New", monospace;
+    --font-one: "Iosevka Fixed", "Courier New", monospace;
 
     /*----- Colors Palette Variables -----*/
 
@@ -210,7 +210,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     color: var(--primary-color);
-    font-weight: 800;
+    font-weight: 700;
     text-decoration: none;
     transition: .125s;
 }
@@ -233,7 +233,7 @@ strong {
 small {
     color: var(--text-shade-color);
     font-size: .75rem;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 1rem;
 }
 
