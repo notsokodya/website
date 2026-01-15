@@ -23,7 +23,7 @@ export default function LastFM({className, ...props}) {
     return <>
         <ul className={className} {...props}>
             {tracks.map((track) => {
-                return <li>
+                return <li key={track.date}>
                     <a className="track" href={track.url} {...props}>
                         <img width="160px" height="160px" src={track.cover} {...props}/>
                         <strong className="title" {...props}>{track.name}</strong>
