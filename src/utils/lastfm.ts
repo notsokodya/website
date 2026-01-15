@@ -51,6 +51,5 @@ if (API_KEY && USERNAME) {
         });
     }
     setInterval(fetchFM, 60000);
-
-    fetchFM();
+    setTimeout(fetchFM, 1500);
 }
