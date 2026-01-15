@@ -10,7 +10,7 @@ export default function LastFM({className, ...props}) {
             setTracks([]);
 
             const data = await fetch("/api/lastfm");
-            const tracksData = await data.json();
+            const tracksData = await data?.json();
 
             setTracks(tracksData || []);
             setLoading(false);
