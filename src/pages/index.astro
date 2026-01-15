@@ -135,14 +135,17 @@ import LastFM from "@/components/home/lastfm";
 
         display: flex;
         flex-direction: column;
+        gap: .5rem;
+
+        color: var(--text-shade-color);
+        transition: .125s;
+    }
+    .tracks .meta {
+        display: flex;
+        flex-direction: column;
 
         text-align: center;
         align-items: center;
-
-        color: var(--text-shade-color);
-        background-color: var(--background-shade-color);
-
-        transition: .125s;
     }
     .tracks img {
         outline: solid 1px var(--border-color);

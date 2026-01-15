@@ -26,12 +26,14 @@ export default function LastFM({className, ...props}) {
                 return <li key={track.date}>
                     <a className="track" href={track.url} {...props}>
                         <img width="160px" height="160px" src={track.cover} {...props}/>
-                        <strong className="title" {...props}>{track.name}</strong>
-                        <span className="artist" {...props}>{track.artist}</span>
-                        <span className="icons" {...props}>
-                            {track.isPlaying ? <span className="playing" title="Now Playing" {...props}>▶</span> : ""}
-                            {track.loved ? <span className="loved" title="Loved" {...props}>❤</span> : ""}
-                        </span>
+                        <div class="meta" {...props}>
+                            <strong className="title" {...props}>{track.name}</strong>
+                            <span className="artist" {...props}>{track.artist}</span>
+                            <span className="icons" {...props}>
+                                {track.isPlaying ? <span className="playing" title="Now Playing" {...props}>▶</span> : ""}
+                                {track.loved ? <span className="loved" title="Loved" {...props}>❤</span> : ""}
+                            </span>
+                        </div>
                     </a>
                 </li>
             })}
