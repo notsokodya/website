@@ -239,14 +239,12 @@ small {
 
 hr {
     width: 100%;
-    margin-top: 2rem;
-    padding-bottom: .15rem;
-    margin-bottom: 2rem;
+    margin: 1rem 0;
 
     border-left: 0;
     border-right: 0;
-    border-top: dotted 3px var(--primary-color);
-    border-bottom: dotted 3px var(--primary-color);
+    border-bottom: 0;
+    border-top: solid 3px var(--primary-color);
 }
 
 mark {
