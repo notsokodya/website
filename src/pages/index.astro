@@ -46,6 +46,35 @@ import LastFM from "@/components/home/lastfm";
     </section>
 
     <section>
+        <h2 class="title">socials & contact</h2>
+        <p>i do exist almost in every corner of the internet<br/>also feel free to text me :3</p>
+
+        <ul class="socials">
+            <li class="social">
+                <span>[discord]</span>
+                <a target="_blank" href="https://discord.com/users/271535529789620224">@notsokodya</a>
+            </li>
+            <li class="social">
+                <span>[telegram]</span>
+                <a target="_blank" href="https://t.me/notsokodya">notsokodya</a>
+            </li>
+
+            <li class="social">
+                <span>[bluesky]</span>
+                <a target="_blank" href="https://bsky.app/profile/notsokodya.bsky.social">notsokodya.bsky.social</a>
+            </li>
+            <li class="social">
+                <span>[youtube]</span>
+                <a target="_blank" href="https://www.youtube.com/@notsokodya">@notsokodya</a>
+            </li>
+            <li class="social">
+                <span>[github]</span>
+                <a target="_blank" href="https://github.com/notsokodya">/notsokodya</a>
+            </li>
+        </ul>
+    </section>
+
+    <section>
         <h2 class="title">88x31 buttons</h2>
         <p>friends :3</p>
     </section>
@@ -172,6 +201,28 @@ import LastFM from "@/components/home/lastfm";
     .tracks .track:hover img {
         transform: perspective(160px) translateY(-4px) rotateX(5deg);
         outline-color: var(--primary-color);
+    }
+
+    .socials {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        align-items: stretch;
+
+        padding: 0;
+        margin: 0;
+
+        list-style: none;
+    }
+
+    .social {
+        display: contents;
+    }
+    .social > span {
+        margin-right: .5rem;
+        text-align: right;
+    }
+    .social > a {
+        width: fit-content;
     }
 
     @keyframes background-move {
