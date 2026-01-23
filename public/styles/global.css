@@ -118,10 +118,10 @@ html {
 :root {
     /*------- Theme Variables -------*/
 
-    --primary-color-hsl:    var(--mauve-300-hsl);
-    --primary-color:        var(--mauve-300);
-    --primary-shade-color:  var(--mauve-400);
-    --primary-tint-color:   var(--mauve-200);
+    --primary-color-hsl:    var(--lavender-400-hsl);
+    --primary-color:        var(--lavender-400);
+    --primary-shade-color:  var(--lavender-500);
+    --primary-tint-color:   var(--lavender-300);
 
     --text-color:           var(--cinder-200);
     --text-shade-color:     var(--cinder-400);
@@ -146,53 +146,53 @@ html {
     /*----- Colors Palette Variables -----*/
 
 
-    --cinder-50:  #f9fafb;
-    --cinder-100: #f4f4f7;
-    --cinder-200: #e7e7eb;
-    --cinder-300: #d3d3db;
-    --cinder-400: #9e9eab;
-    --cinder-500: #717180;
-    --cinder-600: #525360;
-    --cinder-700: #3f3f4b;
-    --cinder-800: #272732;
-    --cinder-900: #171721;
-    --cinder-950: #11111b;
+    --cinder-50:  #f5faff;
+    --cinder-100: #d7dcfa;
+    --cinder-200: #cdd6f4;
+    --cinder-300: #c3c8e1;
+    --cinder-400: #a5afbd;
+    --cinder-500: #6e737d;
+    --cinder-600: #4e525f;
+    --cinder-700: #3b404c;
+    --cinder-800: #23262f;
+    --cinder-900: #11111b;
+    --cinder-950: #0a0a10;
 
-    --cinder-50-hsl:  0, 0%, 99%;
-    --cinder-100-hsl: 0, 0%, 94%;
-    --cinder-200-hsl: 260, 4%, 85%;
-    --cinder-300-hsl: 253, 7%, 75%;
-    --cinder-400-hsl: 252, 9%, 66%;
-    --cinder-500-hsl: 252, 12%, 56%;
-    --cinder-600-hsl: 251, 14%, 47%;
-    --cinder-700-hsl: 246, 15%, 37%;
-    --cinder-800-hsl: 245, 17%, 28%;
-    --cinder-900-hsl: 244, 19%, 18%;
-    --cinder-950-hsl: 244, 21%, 13%;
+    --cinder-50-hsl:  210, 100%, 98%;
+    --cinder-100-hsl: 231, 78%, 91%;
+    --cinder-200-hsl: 226, 64%, 88%;
+    --cinder-300-hsl: 230, 33%, 82%;
+    --cinder-400-hsl: 215, 15%, 69%;
+    --cinder-500-hsl: 220, 6%, 46%;
+    --cinder-600-hsl: 226, 10%, 34%;
+    --cinder-700-hsl: 222, 13%, 26%;
+    --cinder-800-hsl: 225, 15%, 16%;
+    --cinder-900-hsl: 240, 23%, 9%;
+    --cinder-950-hsl: 240, 23%, 5%;
 
-    --mauve-50:  #f9f5ff;
-    --mauve-100: #f1e9fe;
-    --mauve-200: #e6d7fd;
-    --mauve-300: #cfb1fb;
-    --mauve-400: #b788f8;
-    --mauve-500: #9c5bf1;
-    --mauve-600: #853ae3;
-    --mauve-700: #7128c8;
-    --mauve-800: #6126a3;
-    --mauve-900: #502083;
-    --mauve-950: #340a61;
+    --lavender-50:  #f9f5ff;
+    --lavender-100: #f2e7ff;
+    --lavender-200: #e7d4ff;
+    --lavender-300: #d4b2ff;
+    --lavender-400: #be8aff;
+    --lavender-500: #9f51fb;
+    --lavender-600: #882eef;
+    --lavender-700: #741ed2;
+    --lavender-800: #631eab;
+    --lavender-900: #52198a;
+    --lavender-950: #360566;
 
-    --mauve-50-hsl:  264, 100%, 98%;
-    --mauve-100-hsl: 263, 91%, 95%;
-    --mauve-200-hsl: 264, 90%, 92%;
-    --mauve-300-hsl: 264, 90%, 84%;
-    --mauve-400-hsl: 265, 89%, 75%;
-    --mauve-500-hsl: 266, 84%, 65%;
-    --mauve-600-hsl: 267, 75%, 56%;
-    --mauve-700-hsl: 267, 67%, 47%;
-    --mauve-800-hsl: 268, 62%, 39%;
-    --mauve-900-hsl: 269, 61%, 32%;
-    --mauve-950-hsl: 269, 81%, 21%;
+    --lavender-50-hsl:  264, 100%, 98%;
+    --lavender-100-hsl: 268, 100%, 95%;
+    --lavender-200-hsl: 267, 100%, 92%;
+    --lavender-300-hsl: 266, 100%, 85%;
+    --lavender-400-hsl: 267, 100%, 77%;
+    --lavender-500-hsl: 268, 96%, 65%;
+    --lavender-600-hsl: 268, 86%, 56%;
+    --lavender-700-hsl: 269, 75%, 47%;
+    --lavender-800-hsl: 269, 70%, 39%;
+    --lavender-900-hsl: 270, 69%, 32%;
+    --lavender-950-hsl: 270, 91%, 21%;
 }
 
 /*------------------- Components styling -------------------*/
