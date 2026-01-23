@@ -17,7 +17,11 @@ export default function LastFM({className, ...props}) {
         }
 
         fetchTrack();
-        setInterval(fetchTrack, 60000);
+        const interval = setInterval(fetchTrack, 60000);
+
+        return () => {
+            clearInterval(interval);
+        }
     }, [])
 
     return <>
