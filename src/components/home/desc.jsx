@@ -44,7 +44,7 @@ export default function Desc({className, ...props}) {
         setDesc(randomDescriptions[descNum]);
         setHide(false);
 
-        setInterval(() => {
+        const interval = setInterval(() => {
             setHide(true);
 
             setTimeout(() => {
@@ -53,6 +53,10 @@ export default function Desc({className, ...props}) {
                 setHide(false);
             }, 1000);
         }, 10000);
+
+        return () => {
+            clearInterval(interval);
+        }
     }, []);
 
     return <div className={className + (hideDesc ? " hide" : "")}{...props}>{desc}</div>
