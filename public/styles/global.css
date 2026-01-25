@@ -226,8 +226,8 @@ p {
 strong {
     padding: .1rem .2rem;
     font-weight: 700;
-    background-color: hsla(var(--primary-color-hsl), 0.3);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--background-color);
 }
 
 small {
