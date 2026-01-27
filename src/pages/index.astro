@@ -88,6 +88,28 @@ import LastFM from "@/components/home/lastfm";
     <section>
         <h2 class="title">88x31 buttons</h2>
         <p>friends :3</p>
+
+        <ul class="buttons">
+            <li>
+                <a href="https://mariluu.hehe.moe/" target="_blank" class="b88x31">
+                    <img
+                        src="https://mariluu.hehe.moe/content/maribanner.gif"
+                        width="88px"
+                        height="31px"
+                    />
+                </a>
+            </li>
+
+            <li>
+                <a href="https://donut.eu.org/" target="_blank" class="b88x31">
+                    <img
+                        src="https://donut.eu.org/img/88x31/emsite.png"
+                        width="88px"
+                        height="31px"
+                    />
+                </a>
+            </li>
+        </ul>
     </section>
 </Layout>
 
@@ -234,6 +256,31 @@ import LastFM from "@/components/home/lastfm";
     }
     .social > a {
         width: fit-content;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        align-items: stretch;
+
+        gap: .5rem;
+
+        padding: 0;
+        margin: 0;
+
+        list-style: none;
+    }
+
+    .b88x31 {
+        text-decoration: none;
+    }
+
+    .b88x31 > img {
+        transition: .125s;
+    }
+
+    .b88x31:hover > img {
+        transform: scale(1.1);
     }
 
     @keyframes background-move {
