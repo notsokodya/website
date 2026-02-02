@@ -17,6 +17,7 @@ const randomDescriptions = [
     "demoncore production",
     "sleep deprived",
     "haiiii",
+    "cynthoni fan",
     "internet creatura",
     "fish fish shark",
     "evil shark co.",
