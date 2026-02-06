@@ -56,6 +56,14 @@ import NavLink from "./NavLink.astro"
         }
     });
 
+    const media = window.matchMedia("(min-width: 800px)");
+    media.addEventListener("change", (ev) => {
+        if (ev.matches) {
+            visible.value = false;
+        }
+    });
+
+
     drawer.addEventListener("transitionend", () => {
         if (!visible.value) {
             drawer.style.display = "none";
