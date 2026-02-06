@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 
-import react from '@astrojs/react';
+import preact from '@astrojs/preact';
 import node from '@astrojs/node';
 
 export default defineConfig({
@@ -8,7 +8,7 @@ export default defineConfig({
         enabled: false
     },
 
-    integrations: [react()],
+    integrations: [preact()],
 
     adapter: node({
         mode: 'standalone'
