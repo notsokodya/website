@@ -18,9 +18,55 @@ import NavLink from "./NavLink.astro"
                 <span>[projects]</span>
             </NavLink>
         </nav>
+        <button class="navbtn" id="navbutton"><span>[=]</span></button>
+    </div>
+    <div class="drawer" id="drawer">
+        <nav class="links">
+            <NavLink href="/" class="link">
+                <span>[home]</span>
+            </NavLink>
+            <NavLink href="/about" class="link">
+                <span>[about]</span>
+            </NavLink>
+            <NavLink href="/projects" class="link">
+                <span>[projects]</span>
+            </NavLink>
+        </nav>
     </div>
 </header>
 <div class="placeholder" />
+
+<script>
+    import { signal, effect } from "@preact/signals";
+
+    const button = document.querySelector("#navbutton") as HTMLElement;
+    const drawer = document.querySelector("#drawer") as HTMLElement;
+
+    const visible = signal(false);
+
+    effect(() => {
+        button.setAttribute("aria-expanded", String(visible.value));
+
+        if (visible.value) {
+            drawer.style.removeProperty("display");
+            drawer.classList.add("open");
+            document.documentElement.style.overflowY = "hidden";
+        } else {
+            drawer.classList.remove("open");
+        }
+    });
+
+    drawer.addEventListener("transitionend", () => {
+        if (!visible.value) {
+            drawer.style.display = "none";
+            document.documentElement.style.removeProperty("overflow-y");
+        }
+    });
+
+    button.addEventListener("click", () => {
+        visible.value = !visible.value;
+    });
+</script>
 
 <style>
     .navbar {
@@ -123,9 +169,63 @@ import NavLink from "./NavLink.astro"
         background-color: var(--primary-tint-color);
     }
 
+    .navbtn {
+        display: none;
+
+        font-family: var(--font-one);
+        font-size: 1rem;
+        font-weight: 600;
+
+        cursor: pointer;
+        color: var(--primary-color);
+        background-color: transparent;
+        border: inherit;
+    }
+    .navbtn span {
+        padding: .75rem .5rem;
+        transition: .125s;
+    }
+    .navbtn:hover span {
+        color: var(--background-color);
+        background-color: var(--primary-color);
+    }
+
+    .drawer {
+        position: fixed;
+        top: 4rem;
+        width: 100vw;
+        height: calc(100vh - 4rem);
+
+        opacity: 0;
+        background-color: var(--background-color);
+        transition: .125s;
+    }
+    .drawer:is(.open) {
+        opacity: 1;
+    }
+    .drawer .links {
+        flex-direction: column;
+    }
+    .drawer .link {
+        font-size: 1.25rem;
+        justify-content: center;
+    }
+    .drawer .link span {
+        padding: .75rem .75rem;
+    }
+
     .placeholder {
         width: 100%;
         height: 4rem;
         min-height: 4rem;
+    }
+
+    @media screen and (width <= 800px) {
+        .container > .links {
+            display: none;
+        }
+        .navbtn {
+            display: inline;
+        }
     }
 </style>
