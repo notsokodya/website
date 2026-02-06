@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "preact/hooks";
 
 export default function LastFM({className, ...props}) {
     const [tracks, setTracks] = useState([]);
