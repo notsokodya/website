@@ -49,7 +49,7 @@ import NavLink from "./NavLink.astro"
 
         if (visible.value) {
             drawer.style.removeProperty("display");
-            drawer.classList.add("open");
+            setTimeout(() => drawer.classList.add("open"), 1);
             document.documentElement.style.overflowY = "hidden";
         } else {
             drawer.classList.remove("open");
