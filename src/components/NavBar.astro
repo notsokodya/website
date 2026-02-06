@@ -53,6 +53,7 @@ import NavLink from "./NavLink.astro"
             document.documentElement.style.overflowY = "hidden";
         } else {
             drawer.classList.remove("open");
+            document.documentElement.style.removeProperty("overflow-y");
         }
     });
 
@@ -66,7 +67,6 @@ import NavLink from "./NavLink.astro"
     drawer.addEventListener("transitionend", () => {
         if (!visible.value) {
             drawer.style.display = "none";
-            document.documentElement.style.removeProperty("overflow-y");
         }
     });
 
