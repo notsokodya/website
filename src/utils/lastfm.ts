@@ -43,7 +43,7 @@ if (API_KEY && USERNAME) {
                 name: track.name,
                 artist: track.artist.name,
                 url: track.url,
-                cover: (track.image.find((cover: any) => cover.size === "large") || track.image.pop())?.["#text"],
+                cover: track.image.find((cover: any) => cover.size === "large")?.["#text"] || "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png",
                 loved: track.loved == 1,
                 isPlaying: track["@attr"]?.nowplaying === "true",
                 date: track.date ? track.date.uts : "nowplaying"
