@@ -39,8 +39,8 @@ import NavLink from "./NavLink.astro"
 <script>
     import { signal, effect } from "@preact/signals";
 
-    const button = document.querySelector("#navbutton") as HTMLElement;
-    const drawer = document.querySelector("#drawer") as HTMLElement;
+    let button = document.querySelector("#navbutton") as HTMLElement;
+    let drawer = document.querySelector("#drawer") as HTMLElement;
 
     const visible = signal(false);
 
@@ -64,14 +64,23 @@ import NavLink from "./NavLink.astro"
         }
     });
 
-    drawer.addEventListener("transitionend", () => {
-        if (!visible.value) {
-            drawer.style.display = "none";
-        }
+    document.addEventListener("astro:page-load", () => {
+        button = document.querySelector("#navbutton") as HTMLElement;
+        drawer = document.querySelector("#drawer") as HTMLElement;
+
+        drawer.addEventListener("transitionend", () => {
+            if (!visible.value) {
+                drawer.style.display = "none";
+            }
+        });
+
+        button.addEventListener("click", () => {
+            visible.value = !visible.value;
+        });
     });
 
-    button.addEventListener("click", () => {
-        visible.value = !visible.value;
+    document.addEventListener("astro:after-preparation", () => {
+        visible.value = false;
     });
 </script>
 
