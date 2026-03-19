@@ -33,7 +33,8 @@ const randomDescriptions = [
     "segmentation fault",
     "██████████████████",
     "j",
-    "social anxiety ;w;"
+    "social anxiety ;w;",
+    "apathy"
 ];
 
 export default function Desc({className, ...props}) {
