@@ -1,7 +1,6 @@
 ---
 import Layout from "@/layouts/Page.astro";
 import Desc from "@/components/home/desc";
-import LastFM from "@/components/home/lastfm";
 ---
 
 <Layout description="meow meow mrow :3">
@@ -36,12 +35,6 @@ import LastFM from "@/components/home/lastfm";
             usually i play games, write code and do random stuff on the internet<br/>
             also sometimes i go outside (to touch grass)
         </p>
-    </section>
-
-    <section>
-        <h2 class="title">recently listened</h2>
-        <p>my horrible music taste :3</p>
-        <LastFM className="tracks" client:idle/>
     </section>
 
     <section>
@@ -189,61 +182,6 @@ import LastFM from "@/components/home/lastfm";
         background-image: repeating-linear-gradient(45deg, transparent, transparent 1rem, var(--primary-color) 1rem, var(--primary-color) 1.4rem);
         background-size: 2rem 2rem;
         animation: background-move 4s linear infinite;
-    }
-
-    .tracks {
-        display: flex;
-        flex-wrap: wrap;
-        gap: .75rem;
-
-        padding: 0;
-        margin: 0;
-
-        list-style: none;
-    }
-
-    .tracks .track {
-        width: 160px;
-
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
-
-        color: var(--text-shade-color);
-        transition: .125s;
-    }
-    .tracks .meta {
-        display: flex;
-        flex-direction: column;
-
-        text-align: center;
-        align-items: center;
-    }
-    .tracks img {
-        outline: solid 1px var(--border-color);
-        transition: .2s ease-out;
-    }
-    .tracks .title {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        word-wrap: anywhere;
-
-        color: var(--text-color);
-        background-color: transparent;
-    }
-    .tracks .artist {
-        font-size: 0.9rem;
-    }
-    .tracks .loved {
-        color: var(--primary-color);
-    }
-    .tracks .playing {
-        color: var(--text-color);
-    }
-
-    .tracks .track:hover img {
-        transform: perspective(160px) translateY(-4px) rotateX(5deg);
-        outline-color: var(--primary-color);
     }
 
     .socials {
