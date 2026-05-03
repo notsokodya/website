@@ -255,12 +255,11 @@ mark {
 fieldset {
     width: fit-content;
     margin-bottom: 1rem;
-    border-color: var(--primary-color);
+    border: solid 2px var(--primary-color);
 }
 
 fieldset > legend {
     padding: 0 .25rem;
     font-weight: 700;
-    color: var(--background-color);
-    background-color: var(--primary-color);
+    color: var(--primary-color);
 }
