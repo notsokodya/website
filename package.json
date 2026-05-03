@@ -13,10 +13,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/node": "^10.0.2",
-    "@astrojs/preact": "^5.0.1",
+    "@astrojs/node": "^10.0.6",
+    "@astrojs/preact": "^5.1.2",
     "@preact/signals": "^2.7.0",
-    "astro": "^6.0.5",
+    "astro": "^6.2.1",
     "autoprefixer": "^10.4.22",
     "preact": "^10.28.3"
   }
