@@ -10,7 +10,7 @@ interface Props {
 
 const {title, description} = Astro.props;
 
-const metaTitle = `${title ? title + " // " : ""}notso[kodya]`;
+const metaTitle = `${title ? title + " >> " : ""}notso[kodya]`;
 ---
 
 <!doctype html>
@@ -39,6 +39,7 @@ const metaTitle = `${title ? title + " // " : ""}notso[kodya]`;
 
         <ClientRouter />
 	</head>
+
 	<body>
         <NavBar />
         <main transition:animate={fade({duration: "0.25s"})}>
