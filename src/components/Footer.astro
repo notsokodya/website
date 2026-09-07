@@ -7,12 +7,13 @@ const {hash, date} = await getWebsiteVersion();
 <footer>
     <div class="container">
         <div>
-            Made with <mark>❤</mark><br/>
-            © 2025-{(new Date()).getFullYear()} <mark>notsokodya</mark>
+            <span>made with &lt;3</span><br>
+            <span>© 2025-{(new Date()).getFullYear()} <mark>notsokodya</mark></span>
         </div>
+
         <div>
-            Last updated on <mark>{date}</mark><br/>
-            <a href="https://github.com/notsokodya/website" target="_blank">Source code</a> ({hash})
+            <span>last updated on <mark>{date}</mark></span><br>
+            <span><a href="https://github.com/notsokodya/website" target="_blank">source code</a> ({hash})</span>
         </div>
     </div>
 </footer>
@@ -26,10 +27,6 @@ const {hash, date} = await getWebsiteVersion();
         padding: 0;
 
         display: flex;
-
-        border-top: solid var(--border-width) var(--border-color);
-        background-color: var(--background-color);
-        color: var(--text-shade-color);
     }
 
     .container {
@@ -43,6 +40,10 @@ const {hash, date} = await getWebsiteVersion();
 
         margin-left: auto;
         margin-right: auto;
+
+        border-top: solid var(--border-width) var(--border-color);
+        background-color: var(--background-color);
+        color: var(--text-shade-color);
     }
 
     .container div:last-child {
