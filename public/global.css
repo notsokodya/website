@@ -124,7 +124,7 @@ html {
     --primary-tint-color:   var(--lavender-300);
 
     --text-color:           var(--cinder-200);
-    --text-shade-color:     var(--cinder-400);
+    --text-shade-color:     var(--cinder-500);
     --text-tint-color:      var(--cinder-100);
     --text-hover-color:     var(--text-tint-color);
     --text-disabled-color:  var(--text-shade-color);
