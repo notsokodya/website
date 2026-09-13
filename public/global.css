@@ -237,7 +237,7 @@ hr {
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
-    border-top: solid 3px var(--primary-color);
+    border-top: solid 2px var(--border-tint-color);
 }
 
 mark {
