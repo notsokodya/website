@@ -2,39 +2,31 @@ import { useState, useEffect } from "preact/hooks";
 
 const randomDescriptions = [
     "woof :3",
-    "the silly goober",
     "sharrkss are cuuuteeee",
     "engineer gaming",
     "5g horse",
     "mrow :3",
-    "lives in [the void]",
     "self-taught programmer",
     "stay hydrated",
     "sewerslvt fan",
-    "pray the machine",
     "local toaster",
     "shark protogen thing",
-    "demoncore production",
     "sleep deprived",
     "haiiii",
     "cynthoni fan",
     "internet creatura",
     "fish fish shark",
-    "evil shark co.",
     "netwowk swipth",
     "huh",
     "\"bottom text\"",
     "industrial revolution",
     "haha open source",
     "real furry(frfr)",
-    "table.shuffle(_G)",
-    "tf2 gamer",
-    "a fool",
     "segmentation fault",
     "██████████████████",
-    "j",
     "social anxiety ;w;",
-    "apathy"
+    "hi hello haiiii :3",
+    "professional larper"
 ];
 
 export default function Desc({className, ...props}) {
