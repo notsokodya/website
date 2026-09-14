@@ -2,7 +2,7 @@
 import Layout from "@/layouts/Page.astro";
 ---
 
-<Layout title="404: not found" description="whuh, where did u even go??? ;w;">
+<Layout title="not found" description="[404] lost page uwu">
     <div class="head">
         <img
             src="/assets/404_tree.gif"
@@ -12,7 +12,7 @@ import Layout from "@/layouts/Page.astro";
 
         <div class="container">
             <h1>404</h1>
-            <p>where are you even??</p>
+            <p>you're lost, aren't you? owo</p>
         </div>
     </div>
 </Layout>
@@ -22,16 +22,23 @@ import Layout from "@/layouts/Page.astro";
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 1.5rem;
     }
 
     .container {
         display: flex;
         flex-direction: column;
-        text-align: center;
         align-items: center;
     }
 
     .container > h1 {
-        padding: .25rem .5rem;
+        margin: 1rem;
+
+        font-size: 3.25rem;
+        color: var(--text-color);
+        background-color: unset;
+    }
+    .container > p {
+        color: var(--text-shade-color);
     }
 </style>

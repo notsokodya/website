@@ -93,7 +93,7 @@ html {
     color: var(--text-color);
 
     font-family: var(--font-one);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1em;
 
     tab-size: 4;
@@ -124,7 +124,7 @@ html {
     --primary-tint-color:   var(--lavender-300);
 
     --text-color:           var(--cinder-200);
-    --text-shade-color:     var(--cinder-400);
+    --text-shade-color:     var(--cinder-500);
     --text-tint-color:      var(--cinder-100);
     --text-hover-color:     var(--text-tint-color);
     --text-disabled-color:  var(--text-shade-color);
@@ -223,13 +223,6 @@ p {
     margin-block-end: 0.75em;
 }
 
-strong {
-    padding: .1rem .2rem;
-    font-weight: 700;
-    background-color: var(--primary-color);
-    color: var(--background-color);
-}
-
 small {
     color: var(--text-shade-color);
     font-size: .75rem;
@@ -244,7 +237,7 @@ hr {
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
-    border-top: solid 3px var(--primary-color);
+    border-top: solid 2px var(--border-tint-color);
 }
 
 mark {
