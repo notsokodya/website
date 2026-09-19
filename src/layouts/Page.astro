@@ -60,6 +60,7 @@ const metaTitle = `${title ? title + " >> " : ""}notso[kodya]`;
     const grid_scale = 0.002;
     const time_factor = 0.005;
     let reconfig = true;
+    let nodraw = false;
 
     function gradientChoose(x: number = 0, y: number = 0) {
         const noise2D = Math.abs(noise(x * grid_scale, y * grid_scale));
@@ -76,9 +77,15 @@ const metaTitle = `${title ? title + " >> " : ""}notso[kodya]`;
         canvas.width = window.outerWidth;
         canvas.height = window.outerHeight;
         reconfig = true;
+
+        if (window.outerWidth <= 1200) {
+            nodraw = true;
+        } else {
+            nodraw = false;
+        }
     }
     function draw() {
-        if (!ctx) return;
+        if (!ctx || nodraw) return requestAnimationFrame(draw);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         const time = Date.now() * time_factor;
@@ -122,9 +129,11 @@ const metaTitle = `${title ? title + " >> " : ""}notso[kodya]`;
         margin-left: auto;
         margin-right: auto;
 
-        padding-left: .5rem;
-        padding-right: .5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
         padding-bottom: 1rem;
+
+        background-color: var(--background-color);
     }
 
     #dithered-background {
