@@ -18,7 +18,8 @@
     "@preact/signals": "^2.11.2",
     "astro": "^7.3.1",
     "autoprefixer": "^10.5.5",
-    "preact": "^10.29.8"
+    "preact": "^10.29.8",
+    "simplex-noise": "^4.0.3"
   },
   "allowScripts": {
     "esbuild@0.28.2": true

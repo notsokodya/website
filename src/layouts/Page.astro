@@ -42,12 +42,76 @@ const metaTitle = `${title ? title + " >> " : ""}notso[kodya]`;
 
 	<body>
         <NavBar />
+        <canvas id="dithered-background" />
         <main transition:animate={fade({duration: "0.25s"})}>
             <slot />
         </main>
         <Footer />
 	</body>
 </html>
+
+<script>
+    import { createNoise2D } from "simplex-noise";
+
+    let canvas = document.getElementById("dithered-background") as HTMLCanvasElement;
+    let ctx = canvas.getContext("2d");
+    const noise = createNoise2D();
+
+    const grid_scale = 0.002;
+    const time_factor = 0.005;
+    let reconfig = true;
+
+    function gradientChoose(x: number = 0, y: number = 0) {
+        const noise2D = Math.abs(noise(x * grid_scale, y * grid_scale));
+
+        if (noise2D <= 0.25) return " ";
+        if (noise2D <= 0.45) return "░";
+        if (noise2D <= 0.65) return "▒";
+        if (noise2D <= 0.85) return "▓";
+
+        return "█"
+    }
+
+    function resize() {
+        canvas.width = window.outerWidth;
+        canvas.height = window.outerHeight;
+        reconfig = true;
+    }
+    function draw() {
+        if (!ctx) return;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        const time = Date.now() * time_factor;
+        const scrollY = window.scrollY * 0.5;
+
+        if (reconfig) {
+            ctx.font = "30px Iosevka";
+            ctx.fillStyle = "rgb(35 38 47)";
+            reconfig = false;
+        }
+
+        for (let y = 20; y < canvas.height; y += 38) {
+            let row = "";
+            for (let x = 0; x < canvas.width; x += 18) {
+                row += gradientChoose(x + time, y - time + scrollY);
+            }
+
+            ctx.fillText(row, 0, y);
+        }
+
+        requestAnimationFrame(draw);
+    }
+
+    draw();
+    resize();
+
+    window.addEventListener("resize", resize);
+    document.addEventListener("astro:page-load", () => {
+        canvas = document.getElementById("dithered-background") as HTMLCanvasElement;
+        ctx = canvas.getContext("2d");
+        resize();
+    });
+</script>
 
 <style>
     main {
@@ -61,5 +125,19 @@ const metaTitle = `${title ? title + " >> " : ""}notso[kodya]`;
         padding-left: .5rem;
         padding-right: .5rem;
         padding-bottom: 1rem;
+    }
+
+    #dithered-background {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.5;
+
+        overflow: hidden;
+        z-index: -1000;
     }
 </style>
