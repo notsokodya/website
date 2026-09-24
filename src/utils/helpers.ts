@@ -9,7 +9,7 @@ export async function getWebsiteVersion() {
         const childProcess = await import("node:child_process");
 
         const hash = childProcess.execSync("git rev-parse --short HEAD").toString().trim();
-        const date = childProcess.execSync("git log -1 --format=%cd --date=short").toString().trim();
+        const date = childProcess.execSync("git log -1 --format=%cd --date=format:%d-%m-%Y").toString().trim();
 
         GIT_HASH = hash;
         GIT_DATE = date;
